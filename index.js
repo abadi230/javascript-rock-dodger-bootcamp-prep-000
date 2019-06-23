@@ -154,10 +154,10 @@ function moveDodger(e) {
       e.preventDefault();
         e.stopPropagation();
     }
-     if(key == LEFT_ARROW){ 
+     if(key === LEFT_ARROW){ 
        moveDodgerLeft();
         
-     } else if(key == RIGHT_ARROW){ 
+     } else if(key === RIGHT_ARROW){ 
       moveDodgerRight();
      } 
      
