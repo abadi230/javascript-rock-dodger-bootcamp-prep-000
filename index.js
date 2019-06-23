@@ -149,7 +149,7 @@ function endGame() {
 
 function moveDodger(e) {
   
-    var key = e.which;
+    const key = e.which;
     if(key !== LEFT_ARROW && key !== RIGHT_ARROW){
       e.preventDefault();
         e.stopPropagation();
