@@ -132,10 +132,10 @@ function endGame() {
   
   clearInterval(gameInterval);
   clearInterval(moveDodger);
-  var currentRocks =  GAME.querySelectorAll('.rock')
-  for(let i = 0; i < currentRocks.length; i++){
-    currentRocks[i].remove()
-    }
+  // var currentRocks =  GAME.querySelectorAll('.rock')
+  // for(let i = 0; i < currentRocks.length; i++){
+  //   currentRocks[i].remove()
+  //   }
   
   alert('YOU LOSE!')
 }
