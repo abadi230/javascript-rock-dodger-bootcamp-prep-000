@@ -131,35 +131,36 @@ function createRock(x) {
 function endGame() {
   
   clearInterval(gameInterval);
-  clearInterval(moveDodger);
+  
   // var currentRocks =  GAME.querySelectorAll('.rock')
   // for(let i = 0; i < currentRocks.length; i++){
   //   currentRocks[i].remove()
   //   }
+  ROCKS.forEach((rock)=>{
+    rock.remove()
+  });
+  
+  // clearInterval(moveDodger);
+  document.removeEventListener('keydown', moveDodger);
+  
   
   alert('YOU LOSE!')
 }
 
 function moveDodger(e) {
   
-  // document.addEventListener('keydown', e=>{
-    // if(e.which !== RIGHT_ARROW && e.which !== LEFT_ARROW){
-    //   e.preventDefault();
-    // }
     var key = e.which;
+    if(key !== LEFT_ARROW && key !== RIGHT_ARROW){
+      e.preventDefault();
+        e.stopPropagation();
+    }
      if(key == LEFT_ARROW){ 
        moveDodgerLeft();
-        e.preventDefault();
-        e.stopPropagation();
-     }
-     if(key == RIGHT_ARROW){ 
-      e.preventDefault();
+        
+     } else if(key == RIGHT_ARROW){ 
       moveDodgerRight();
-      e.stopPropagation();
      } 
      
-  // });
-   
 }
 
 function moveDodgerLeft() {
