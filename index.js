@@ -177,11 +177,13 @@ function moveDodgerLeft() {
 function moveDodgerRight() {
  
   let dodgerN = positionToInteger(DODGER.style.left);
-  window.requestAnimationFrame((moveDodgerRight));
-  if(dodgerN < 360){
+  window.requestAnimationFrame(()=>{
+    if(dodgerN < 360){
     DODGER.style.left = `${dodgerN + 4}px`;
     
       }
+  });
+  
 }
 
 /**
