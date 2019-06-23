@@ -150,7 +150,7 @@ function endGame() {
 function moveDodger(e) {
   
     const key = e.which;
-    if(key !== LEFT_ARROW && key !== RIGHT_ARROW){
+    if([LEFT_ARROW, RIGHT_ARROW].indexOf(key) > -1){
       e.preventDefault();
         e.stopPropagation();
     }
